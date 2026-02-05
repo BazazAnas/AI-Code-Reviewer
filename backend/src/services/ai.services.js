@@ -84,7 +84,6 @@ const model = genAI.getGenerativeModel({
 export async function main(code) {
     try {
         const result = await model.generateContent(code);
-        console.log(result.response.text())
         return result.response.text();
 
     } catch (error) {

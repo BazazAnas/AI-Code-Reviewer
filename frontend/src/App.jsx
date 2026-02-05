@@ -95,7 +95,7 @@ const App = () => {
                   <Markdowm>{review}</Markdowm>
                 </pre>
               ) : (
-                <span className="text-slate-600 italic">No output to display...</span>
+                <span className="text-slate-600 italic">No review to display...</span>
               )}
             </div>
           </div>
