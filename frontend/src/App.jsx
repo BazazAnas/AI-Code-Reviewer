@@ -39,13 +39,14 @@ const App = () => {
             {/* Header bar from the UI you liked */}
             <div className="px-4 py-3 bg-slate-800/50 border-b border-slate-700/50 flex justify-between items-center">
               <div className="flex items-center gap-2">
-                <span className="text-slate-400 text-xs font-mono ml-2 uppercase tracking-widest">Input_Editor</span>
+                <span className="text-slate-400 text-xs font-mono ml-2 uppercase tracking-widest">Paste your code here</span>
               </div>
             </div>
 
             {/* Editor Area with proper Scrolling and Selection */}
             <div className="flex-1 overflow-auto scrollbar-custom relative">
               <Editor
+                name='code'
                 value={code}
                 onValueChange={code => setCode(code)}
                 highlight={code => highlight(code, languages.js)}
@@ -80,7 +81,6 @@ const App = () => {
             </button>
           </div>
         </div>
-
         {/* RIGHT DIV: Output Preview */}
         <div className="flex-1 relative group rounded-xl overflow-hidden p-0.5">
           <div className="absolute inset-[-1000%] animate-[spin_5s_linear_infinite_reverse] bg-[conic-gradient(from_90deg_at_50%_50%,#1e293b_0%,#8b5cf6_25%,#1e293b_50%,#8b5cf6_75%,#1e293b_100%)]" />
@@ -100,41 +100,7 @@ const App = () => {
             </div>
           </div>
         </div>
-
       </div>
-
-      <style>{`
-        .editor-content textarea {
-          outline: none !important;
-          background-color: transparent !important;
-          color: transparent !important;
-          caret-color: white !important;
-          z-index: 1 !important;
-        }
-        
-        /* Make sure the text selection is visible */
-        .editor-content textarea::selection {
-          background-color: rgba(59, 130, 246, 0.3) !important;
-        }
-
-        @keyframes spin {
-          from { transform: rotate(0deg); }
-          to { transform: rotate(360deg); }
-        }
-
-        .scrollbar-custom::-webkit-scrollbar {
-          width: 8px;
-          height: 8px;
-        }
-        .scrollbar-custom::-webkit-scrollbar-thumb {
-          background-color: #1e293b;
-          border-radius: 10px;
-          border: 2px solid #0f172a;
-        }
-        .scrollbar-custom::-webkit-scrollbar-track {
-          background: transparent;
-        }
-      `}</style>
     </div>
   );
 };
