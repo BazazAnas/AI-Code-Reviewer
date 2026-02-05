@@ -1,1 +1,40 @@
 @import "tailwindcss";
+
+
+.editor-content textarea {
+    outline: none !important;
+    background-color: transparent !important;
+    color: transparent !important;
+    caret-color: white !important;
+    z-index: 1 !important;
+}
+
+/* Make sure the text selection is visible */
+.editor-content textarea::selection {
+    background-color: rgba(59, 130, 246, 0.3) !important;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.scrollbar-custom::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+    background-color: #1e293b;
+    border-radius: 10px;
+    border: 2px solid #0f172a;
+}
+
+.scrollbar-custom::-webkit-scrollbar-track {
+    background: transparent;
+}
