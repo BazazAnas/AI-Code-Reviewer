@@ -5,7 +5,9 @@ import cors from "cors"
 
 env.config();
 
+
 const allowedOrigins = process.env.CLIENT_URL.split(",");
+
 
 const app = express();
 const PORT = process.env.PORT || 3000;
