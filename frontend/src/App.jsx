@@ -15,7 +15,7 @@ const App = () => {
   const handleSubmit = async () => {
     setIsSubmitting(true);
     try {
-      const response = await axios.post("http://localhost:3000/ai/get-response", { code })
+      const response = await axios.post("https://code-reviewer-8z8z.onrender.com/ai/get-response", { code })
       setReview(response.data)
     } catch (error) {
       console.log(error)
