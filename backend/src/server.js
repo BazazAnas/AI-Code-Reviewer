@@ -5,12 +5,14 @@ import cors from "cors"
 
 env.config();
 
+const allowedOrigins = process.env.CLIENT_URLS.split(",");
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(cors({
-    origin: process.env.CLIENT_URL
+    origin: allowedOrigins
 }))
 
 app.use("/ai", aiRoutes);
