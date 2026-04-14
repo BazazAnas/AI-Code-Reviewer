@@ -22,7 +22,6 @@ const App = () => {
     } finally {
       setIsSubmitting(false);
     }
-
   };
 
   return (
@@ -42,7 +41,6 @@ const App = () => {
                 <span className="text-slate-400 text-xs font-mono ml-2 uppercase tracking-widest">Paste your code here</span>
               </div>
             </div>
-
             {/* Editor Area with proper Scrolling and Selection */}
             <div className="flex-1 overflow-auto scrollbar-custom relative">
               <Editor
@@ -84,7 +82,6 @@ const App = () => {
         {/* RIGHT DIV: Output Preview */}
         <div className="flex-1 relative group rounded-xl overflow-hidden p-0.5">
           <div className="absolute inset-[-1000%] animate-[spin_5s_linear_infinite_reverse] bg-[conic-gradient(from_90deg_at_50%_50%,#1e293b_0%,#8b5cf6_25%,#1e293b_50%,#8b5cf6_75%,#1e293b_100%)]" />
-
           <div className="relative h-full w-full bg-slate-900 rounded-xl flex flex-col">
             <div className="px-4 py-3 bg-slate-800/50 border-b border-slate-700/50">
               <span className="text-slate-400 text-xs font-mono uppercase tracking-widest">Review of code</span>
